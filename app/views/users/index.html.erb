@@ -1,8 +1,28 @@
 <div class="container">
   <div class="row">
-    <%= render "users/info", user:@user, book:@book_new
+    <%= render "users/info", user:@user, book:@book_new %>
     <div class="col">
       <h1>Index of user</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+          <tr>
+            <td>
+              <%= attachment_image_tag user, :profile_image, fallback:"no_image.jpg", size:"40x40" %>
+            </td>
+            <td><%= user.name %></td>
+            <td><%= link_to "Show", user_path(user.id) %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

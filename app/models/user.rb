@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :books
+  
 
   validates :name, presence:true
   validates :introduction, presence:true

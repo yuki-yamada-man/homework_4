@@ -2,6 +2,16 @@
   <div class="row">
     <div class="col">
       <h1>Editing of book</h1>
+      <%= form_with model: @book, local: true do |f| %>
+      <h2>Title</h2>
+      <%= f.text_field:title %>
+      <h2>Opinion</h2>
+      <%= f.text_area:body %>
+      <%= f.submit"Update book", class:"btn btn-success" %>
+      <%= link_to "Show book", book_path(@book.id), class:"btn btn-primary" %>
+       |
+      <%= link_to "Back book", books_path, class:"btn btn-danger" %>
+      <% end %>
     </div>
   </div>
 </div>
