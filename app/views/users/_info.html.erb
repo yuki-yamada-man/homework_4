@@ -1,15 +1,15 @@
 <div class="col md-3" >
   <h1>User infomation</h1>
-  <%= attachment_image_tag @user, :profile_image, fallback:"no_image.jpg", size:"100x100" %>
+  <%= attachment_image_tag user, :profile_image, fallback:"no_image.jpg", size:"100x100" %>
   <table>
     <tr></tr>
     <tr>
       <td>name</td>
-      <td><%= @user.name %></td>
+      <td><%= user.name %></td>
     </tr>
     <tr>
       <td>introduction</td>
-      <td><%= @user.introduction %></td>
+      <td><%= user.introduction %></td>
     </tr>
   </table>
   <div class="row">
@@ -17,7 +17,7 @@
   </div>
 
   <h1>New Book</h1>
-  <%= form_with model: @book, local:true do |f| %>
+  <%= form_with model: book, local:true do |f| %>
   <h2>Title</h2>
   <%= f.text_field:title %>
   <h2>Opinion</h2>

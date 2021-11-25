@@ -7,7 +7,7 @@
         <tbody>
           <tr>
             <td>
-              <%= link_to,user_path(@user.id) %>
+              <%= link_to,user_path(@user.id) do %>
                <%= attachiment_image_tag @user, :profile_image, fallback:"no_image.jpg" %>
                <%= @user.name %>
               <% end %>

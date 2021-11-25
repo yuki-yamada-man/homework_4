@@ -6,11 +6,8 @@
        <h2>name</h2>
        <%= f.text_field:name %>
        <h2>inrtoduction</h2>
-       <%= f.text.area:introduction %>
+       <%= f.text_area:introduction %>
        <%= f.submit"Update user", class:"btn btn-success" %>
-       <%= link_to"show" ,user_path(@user.id), class:"btn btn-primary" %>
-        |
-       <%= link_to"back" ,users_path, class:"btn btn-danger" %>
       <% end %>
     </div>
   </div>
